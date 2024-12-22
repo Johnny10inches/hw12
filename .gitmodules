@@ -1,0 +1,3 @@
+[submodule "App42PaaS-Java-MySQL-Sample"]
+	path = App42PaaS-Java-MySQL-Sample
+	url = https://github.com/shephertz/App42PaaS-Java-MySQL-Sample
