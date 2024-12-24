@@ -7,6 +7,16 @@ services:
     container_name: maven-builder
     volumes:
       - app_volume:/war
+  db:
+    image: mysql:8.0.40-debian
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: app_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
 
   runner:
     image: tomcat:9.0.98-jdk11
@@ -26,3 +36,4 @@ services:
 
 volumes:
   app_volume:
+  db_data:
